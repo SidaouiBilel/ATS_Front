@@ -4,11 +4,13 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.Alldemands',
-  'myApp.view2',
+  'myApp.home',
+  'myApp.login',
+    'myApp.signup',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/'});
+  $routeProvider.otherwise({redirectTo: '/home'});
 }]);
