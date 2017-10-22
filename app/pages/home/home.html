@@ -1,0 +1,177 @@
+<div class="inner">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm" ng-controller="homeCtrl">
+            <div class="row">
+                <h2> Demand a Service or Material </h2>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-sm-6 align-center">
+                    <input type="radio" id="material" name="categorie" ng-model="categorie" ng-value="false">
+                    <label for="material">Material</label>
+                </div>
+                <div class="col-sm-6 align-center">
+                    <input type="radio" id="services" name="categorie" ng-model="categorie" ng-value="true">
+                    <label for="services">Services</label>
+                </div>
+            </div>
+            <br/>
+              <div class="align-center" ng-if="categorie">
+                        <form>
+                        <table>
+                            <tr>
+                                <label for="message">Describe the service you require:</label>
+                                <textarea name="message" id="message" placeholder="Enter your message" rows="3"></textarea>
+                                <br/>
+                            </tr>
+
+                            <tr>
+                                <label for="service">What type of service?</label>
+                                <select name="service" id="service" ng-model="type_service">
+                                    <option ng-value="0"> - Category - </option>
+                                    <option ng-value="1">Manufacturing</option>
+                                    <option ng-value="2">Shipping</option>
+                                    <option ng-value="3">Administration</option>
+                                    <option ng-value="4">Human Resources</option>
+                                </select>
+                                <br/>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="budgetme">Type of the Budget?</label>
+                                    <select name="budgetme" id="budgetme" ng-model="budget_type">
+                                        <option ng-value="'global'"> Global </option>
+                                        <option ng-value="'currency'"> Currency</option>
+                                        <option ng-value="'unpaid'"> Unpaid</option>
+                                    </select>
+                                </td>
+
+                                <td>
+                                    <label for="budgetpe">By hour or Day?</label>
+                                    <select name="budgetpe" id="budgetpe" ng-model="budget_time">
+                                        <option ng-value="'hour'"> By hour </option>
+                                        <option ng-value="'day'"> By Day</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                    <label for="budget">Amount of the budget?</label>
+                                    <input type="text" id="budget" name="budget" placeholder="Amount">
+
+                                <br/>
+                            </tr>
+
+                            <tr>
+
+                                    <label for="where">Location of the service?</label>
+                                    <input type="text" id="where" name="where" placeholder="Location">
+
+                                <br/>
+                            </tr>
+
+                        </table>
+                            <tr>
+                                <button type="submit" class="button special">Submit</button>
+                            </tr>
+                        </form>
+                    </div>
+              <div class="align-center" ng-if="!categorie">
+                        <form>
+                          <table>
+                                <tr>
+                                    <label for="material_name">Describe the material you require:</label>
+                                    <textarea name="material_name" id="material_name" placeholder="Enter your message" rows="3"></textarea>
+                                    <br/>
+                                </tr>
+                                <tr>
+                                    <label for="material_type">What type of material?</label>
+                                    <select name="material_type" id="material_type" ng-model="type_service">
+                                        <option ng-value="0"> - Category - </option>
+                                         <option ng-value="1">Electronic</option>
+                                        <option ng-value="2">Metal</option>
+                                        <option ng-value="3">Optical</option>
+                                        <option ng-value="4">Biomaterials</option>
+                                    </select>
+                                <br/>
+                                </tr>
+                              <tr>
+                        <label for="lend_days">How many day will you keep this material?</label>
+                        <input type="text" id="lend_days" name="lend_days" placeholder="Number of days?">
+                        <br/>
+                    </tr>
+                              <tr>
+                            <label for="material_budget">Amount of the budget?</label>
+                            <input type="text" id="material_budget" name="material_budget" placeholder="Amount">
+                        <br/>
+                    </tr>
+                              <tr>
+                                 <label for="where_material">Location of the service?</label>
+                                 <input type="text" id="where_material" name="where_material" placeholder="Location">
+                                  <br/>
+                             </tr>
+                              <tr>
+                                  <button type="submit" class="button special">Submit</button>
+                                </tr>
+
+                          </table>
+                        </form>
+            </div>
+            <br/>
+            <div class="row">
+                <h2> List of latest demands:</h2>
+            </div>
+            <br/>
+            <div class="row">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Item 1</td>
+                        <td>Ante turpis integer aliquet porttitor.</td>
+                        <td>29.99</td>
+                    </tr>
+                    <tr>
+                        <td>Item 2</td>
+                        <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                        <td>19.99</td>
+                    </tr>
+                    <tr>
+                        <td>Item 3</td>
+                        <td> Morbi faucibus arcu accumsan lorem.</td>
+                        <td>29.99</td>
+                    </tr>
+                    <tr>
+                        <td>Item 4</td>
+                        <td>Vitae integer tempus condimentum.</td>
+                        <td>19.99</td>
+                    </tr>
+                    <tr>
+                        <td>Item 5</td>
+                        <td>Ante turpis integer aliquet porttitor.</td>
+                        <td>29.99</td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td>100.00</td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="align-center">
+                <a href="#!Alldemands" class="button special">All Demands</a>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+</div>
