@@ -19,21 +19,22 @@
 </header>
 <!-- Nav -->
 <nav id="menu">
-  <ul class="links">
+  <ul class="links" ng-controller="homeCtrl">
     <li><a href="#!home">Home</a></li>
+    <li><a href="#!profile" ng-if="!loggedin()">Profile</a> </li>
+    <li><a href="#!message" ng-if="!loggedin()">Messages</a> </li>
     <li><a href="#!Alldemands">All Demands</a></li>
     <li><a href="#!login">Log in</a></li>
     <li><a href="#!signup">Sign up</a></li>
   </ul>
 </nav>
-
 <!-- Banner -->
 <section class="banner full">
   <article>
     <img src="images/slide01.jpg" alt="" />
     <div class="inner">
       <header>
-        <p>An IT Startup based in Belgium <a href="https://templated.co">TEMPLATED</a></p>
+        <p>An IT Startup based in Belgium</p>
         <h2>Share IT</h2>
       </header>
     </div>
@@ -42,8 +43,8 @@
     <img src="images/slide02.jpg" alt="" />
     <div class="inner">
       <header>
-        <p>Message</p>
-        <h2>7ot klem hné</h2>
+        <p>Share IT</p>
+        <h2>Quote number 1</h2>
       </header>
     </div>
   </article>
@@ -51,8 +52,8 @@
     <img src="images/slide03.jpg"  alt="" />
     <div class="inner">
       <header>
-        <p>Message 2</p>
-        <h2>Aziz za3ma nimchiwl canada?</h2>
+        <p>Share IT</p>
+        <h2>Quote number 2</h2>
       </header>
     </div>
   </article>
@@ -60,8 +61,8 @@
     <img src="images/slide04.jpg"  alt="" />
     <div class="inner">
       <header>
-        <p>Dabarit PFE fi ghana </p>
-        <h2>ok bb</h2>
+        <p>Share IT </p>
+        <h2>Quote Number 3</h2>
       </header>
     </div>
   </article>
@@ -69,8 +70,8 @@
     <img src="images/slide05.jpg"  alt="" />
     <div class="inner">
       <header>
-        <p>Pushiw haja yahdikom rabbi</p>
-        <h2>bilel sidaoui</h2>
+        <p>Share IT</p>
+        <h2>Quote Number 4</h2>
       </header>
     </div>
   </article>
@@ -125,8 +126,10 @@
   <script src="app.js"></script>
   <script src="pages/Alldemands/Alldemands.js"></script>
   <script src="pages/home/home.js"></script>
+<script src="pages/message/message.js"></script>
   <script src="pages/login/login.js"></script>
   <script src="pages/signup/signup.js"></script>
+<script src="pages/profile/profile.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

@@ -14,5 +14,10 @@ $scope.categorie = true;
 $scope.type_service = 0;
 $scope.budget_time = "hour";
 $scope.budget_type = "global";
-$scope.material_type = 0
+$scope.material_type = 0;
+
+
+$scope.loggedin = function () {
+    return (localStorage.getItem('uid') != null);
+};
 }]);

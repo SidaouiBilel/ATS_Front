@@ -6,7 +6,9 @@ angular.module('myApp', [
   'myApp.Alldemands',
   'myApp.home',
   'myApp.login',
-    'myApp.signup',
+  'myApp.signup',
+  'myApp.message',
+  'myApp.profile',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
